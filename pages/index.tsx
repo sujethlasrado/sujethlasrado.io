@@ -1,4 +1,6 @@
+import About from "@/components/home/About";
 import CTA from "@/components/home/CTA";
+import Experience from "@/components/home/Experience";
 import Hero from "@/components/home/Hero";
 import Page from "@/components/utility/Page";
 // import Posts from "@/components/home/Posts";
@@ -18,9 +20,16 @@ import Testimonials from "@/components/home/Testimonials";
 
 export default function Home() {
   return (
-    <Page currentPage="Home" meta={{ desc: "I'm a passionate web developer and designer coding beautiful websites and apps." }}>
+    <Page
+      currentPage="Home"
+      meta={{
+        desc: "I'm a passionate Fullstack developer building modern web applications with React, Node.js, and cutting-edge technologies.",
+      }}
+    >
       <Hero />
       <div className="mt-20 space-y-32">
+        <About />
+        <Experience />
         <Projects />
         <Skills />
         <Testimonials />

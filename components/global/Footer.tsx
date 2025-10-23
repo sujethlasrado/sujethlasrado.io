@@ -42,37 +42,16 @@ function Footer() {
         })}
         <div className="text-center col-span-2 sm:col-auto sm:text-left pt-8 sm:mt-0 sm:pt-0 text-fun-gray border-t border-fun-pink-dark sm:border-0">
           <h4 className="uppercase text-fun-gray text-sm font-bold">
-            Support My Work
+            Quick Contact
           </h4>
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
-            {footer.support.buymeacoffee !== "" && (
-              <div>
-                <a
-                  href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/buy-me-a-coffee.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )}
-            {footer.support.paypal !== "" && (
-              <div>
-                <a
-                  href={`https://paypal.me/${footer.support.paypal}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/paypal.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )}
+            <div className="text-fun-gray-light text-sm">
+              <p className="mb-2">📧 sujethlasrado8@gmail.com</p>
+              <p className="mb-2">📍 Essen, Germany</p>
+              <p className="mb-2">💼 Available for opportunities</p>
+            </div>
             <p className="text-fun-gray text-xs pt-1">
-              {footer.support.message}
+              Let's build something amazing together! 🤝
             </p>
           </div>
         </div>
@@ -112,10 +91,10 @@ function Footer() {
           <div className="mt-2 text-xs ">
             Made by{" "}
             <a
-              href="mailto:contact@braydentw.io"
+              href="mailto:sujethlasrado8@gmail.com"
               className="text-fun-gray-light font-medium"
             >
-              Brayden Wright
+              Sujeth Lasrado
             </a>
             . All rights reserved.
           </div>

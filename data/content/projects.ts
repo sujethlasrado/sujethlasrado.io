@@ -4,29 +4,45 @@ import { Project } from "types";
 const projects: Project[] = [
   {
     id: 0,
-    title: "Learn.TheYEI",
-    desc: "All the resources you will need to get a boost into economics.",
-    img: "/static/projects/yei-learn.png",
-    link: "https://learn.theyei.org/",
-    github: "https://github.com/braydentw/learn.theyei",
-    tags: ["React", "NextJS", "TailwindCSS", "CSS", "Firebase"],
+    title: "FullstackWithDocker",
+    desc: "A simple full-stack Dockerized application with a Vite React frontend, Node.js/Express backend, and PostgreSQL database. Easily deployable with Docker Compose.",
+    img: "/static/projects/docker-image.png",
+    link: "https://github.com/sujethlasrado/FullstackWithDocker",
+    github: "https://github.com/sujethlasrado/FullstackWithDocker",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "Docker Compose",
+    ],
   },
   {
     id: 1,
-    title: "BuildFaster",
-    desc: "Beautiful HTML templates ready-made for your next landing page.",
+    title: "Attendance Management System",
+    desc: "Full Stack Attendance Management System built with Spring Boot backend and React.js frontend. Features include viewing, adding, deleting attendance records and generating PDF reports.",
     img: "/static/projects/buildfaster.png",
-    link: "https://buildfaster-io.vercel.app/",
-    tags: ["HTML", "CSS", "Javascript", "Gumroad"],
+    link: "https://github.com/sujethlasrado/AttendanceManagement-Backend/tree/backend-code",
+    github:
+      "https://github.com/sujethlasrado/AttendanceManagement-Frontend/tree/frontend-code",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Bootstrap",
+    ],
   },
   {
     id: 2,
-    title: "React Emoji Search",
-    desc: "1800+ emojis at your fingertips. Ready-to-use with just a simple copy+paste.",
+    title: "DrumSet",
+    desc: "A web-based virtual drum set application built with JavaScript, HTML & CSS. Features clickable drum pads and keyboard support for playing different drum sounds.",
     img: "/static/projects/react-emoji-search.png",
-    link: "https://react-emoji-search.braydentw.vercel.app/",
-    github: "https://github.com/braydentw/react-emoji-search",
-    tags: ["React", "CSS", "JSON"],
+    link: "https://github.com/sujethlasrado/DrumSet/tree/main",
+    github: "https://github.com/sujethlasrado/DrumSet/tree/main",
+    tags: ["JavaScript", "HTML", "CSS", "Audio", "Web Audio API"],
   },
   {
     id: 3,
@@ -71,14 +87,12 @@ const projects: Project[] = [
   },
 ];
 
-export const allTags = []
+export const allTags = [];
 
 projects.forEach((project) => {
-  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag))
+  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag));
 });
 
-export const allKebabTags = allTags.map(tag => (
-  kebabCase(tag)
-))
+export const allKebabTags = allTags.map((tag) => kebabCase(tag));
 
-export default projects
+export default projects;

@@ -1,25 +1,20 @@
 type Route = {
-  title: string,
-  path: string
-}
+  title: string;
+  path: string;
+};
 
 type FooterCol = {
-  title: string,
+  title: string;
   links: {
-    name: string,
-    link: string,
-    icon?: string,
-    leavesWebsite: boolean
-  }[]
-}
+    name: string;
+    link: string;
+    icon?: string;
+    leavesWebsite: boolean;
+  }[];
+};
 
 type Footer = {
-  columns: FooterCol[]
-  support: {
-    buymeacoffee: string
-    paypal: string
-    message: string
-  }
+  columns: FooterCol[];
 };
 
 export const routes: Route[] = [
@@ -40,7 +35,6 @@ export const routes: Route[] = [
     path: "/designs",
   },
 ];
-
 
 export const footer: Footer = {
   columns: [
@@ -74,40 +68,23 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/braydentw",
+          link: "https://github.com/sujethlasrado",
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/braydentw/",
+          link: "https://www.linkedin.com/in/sujeth-lasrado",
           icon: "/static/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
         {
-          name: "Dribbble",
-          link: "https://dribbble.com/braydentw",
-          icon: "/static/icons/dribbble-f.svg",
-          leavesWebsite: true,
-        },
-        {
-          name: "IndieHackers",
-          link: "https://indiehackers.com/braydentw",
-          icon: "/static/icons/indiehackers-f.svg",
-          leavesWebsite: true,
-        },
-        {
           name: "Email",
-          link: "mailto:contact@braydentw.io",
+          link: "mailto:sujethlasrado8@gmail.com",
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
       ],
     },
   ],
-  support: {
-    buymeacoffee: "braydenw",
-    paypal: "braydentw",
-    message: "I appreciate your support very much! 💙",
-  },
 };
