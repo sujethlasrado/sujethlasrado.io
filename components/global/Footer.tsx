@@ -46,12 +46,12 @@ function Footer() {
           </h4>
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
             <div className="text-fun-gray-light text-sm">
-              <p className="mb-2">📧 sujethlasrado8@gmail.com</p>
+              <p className="mb-2">📧 sujethlasrado0804@gmail.com</p>
               <p className="mb-2">📍 Essen, Germany</p>
               <p className="mb-2">💼 Available for opportunities</p>
             </div>
             <p className="text-fun-gray text-xs pt-1">
-              Let's build something amazing together! 🤝
+              Ready to turn ideas into reality? Let's connect! ⚡
             </p>
           </div>
         </div>

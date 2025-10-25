@@ -31,8 +31,8 @@ export const routes: Route[] = [
     path: "/projects",
   },
   {
-    title: "Designs",
-    path: "/designs",
+    title: "Certifications",
+    path: "/certifications",
   },
 ];
 
@@ -57,8 +57,8 @@ export const footer: Footer = {
           leavesWebsite: false,
         },
         {
-          name: "Designs",
-          link: "/designs",
+          name: "Certifications",
+          link: "/certifications",
           leavesWebsite: false,
         },
       ],
@@ -74,13 +74,13 @@ export const footer: Footer = {
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/sujeth-lasrado",
+          link: "https://www.linkedin.com/in/sujethlasrado-1999/",
           icon: "/static/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
         {
           name: "Email",
-          link: "mailto:sujethlasrado8@gmail.com",
+          link: "https://mail.google.com/mail/?view=cm&fs=1&to=sujethlasrado0804@gmail.com&su=Portfolio%20Inquiry",
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
