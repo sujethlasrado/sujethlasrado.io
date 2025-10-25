@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react";
-
 import Link from "next/link";
-import {routes} from "@/data/global";
-import useDelayedRender from "use-delayed-render";
+import { routes } from "@/data/global";
 
 export default function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
-    {
-      enterDelay: 20,
-      exitDelay: 300,
+  const [isMenuMounted, setIsMenuMounted] = useState(false);
+  const [isMenuRendered, setIsMenuRendered] = useState(false);
+
+  // Handle menu mount/unmount and delayed rendering
+  useEffect(() => {
+    let enterTimer, exitTimer;
+
+    if (isMenuOpen) {
+      setIsMenuMounted(true);
+      enterTimer = setTimeout(() => setIsMenuRendered(true), 20); // enter delay
+    } else if (isMenuMounted) {
+      setIsMenuRendered(false);
+      exitTimer = setTimeout(() => setIsMenuMounted(false), 300); // exit delay
     }
-  );
+
+    return () => {
+      clearTimeout(enterTimer);
+      clearTimeout(exitTimer);
+    };
+  }, [isMenuOpen, isMenuMounted]);
 
   function toggleMenu() {
     if (isMenuOpen) {
@@ -25,7 +36,7 @@ export default function MobileNavbar() {
   }
 
   useEffect(() => {
-    return function cleanup() {
+    return () => {
       document.body.style.overflow = "";
     };
   }, []);
@@ -33,7 +44,9 @@ export default function MobileNavbar() {
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuRendered && 'bg-bg'} p-5`}
+        className={`w-full justify-between flex items-center ${
+          isMenuRendered ? "bg-bg" : ""
+        } p-5`}
         style={{ zIndex: 101 }}
       >
         <li className="list-none font-bold text-lg">
@@ -55,23 +68,24 @@ export default function MobileNavbar() {
           <CrossIcon data-hide={!isMenuOpen} />
         </button>
       </div>
+
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col absolute bg-bg
-            ${isMenuRendered && "menuRendered"}`}
+          className={`menu flex flex-col absolute bg-bg ${
+            isMenuRendered ? "menuRendered" : ""
+          }`}
         >
-          {routes.map((item, index) => {
-            return (
-              <li
-                className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
-                style={{ transitionDelay: `${150 + index * 25}ms` }}
-              >
-                <Link href={item.path}>
-                  <a className="flex w-auto pb-4">{item.title}</a>
-                </Link>
-              </li>
-            );
-          })}
+          {routes.map((item, index) => (
+            <li
+              key={index}
+              className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
+              style={{ transitionDelay: `${150 + index * 25}ms` }}
+            >
+              <Link href={item.path}>
+                <a className="flex w-auto pb-4">{item.title}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </nav>
