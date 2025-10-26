@@ -1,19 +1,18 @@
-# **[braydentw.io](https://braydentw.io)**
+# **[sujethlasrado-io](https://sujethlasrado-io.netlify.app)**
 
-Hey there! I'm Brayden and this is my lovely lovely portfolio built using **React, NextJS, and TailwindCSS**!
+Hi there 👋 I'm **Sujeth Lasrado**, and this is my **personal portfolio website** — designed, built, and deployed using **React** and **TailwindCSS**, hosted on **Netlify**.
 
-## Guidelines
+I built and deployed this entire project in **under an hour** using the power of modern AI tools:  
+#ChatGPT #ClaudeAI #CursorAI #PerplexityAI #GitHubCopilot #LovableAI  
 
-> **Note**: **I ask of you that you do your best to follow these rules:**
+---
 
-1. You can **use** this code and style **as inspiration**.
-2. **Please do not copy it directly**.
-3. **Giving credit** to (@BraydenTW) the author **is appreciated**.
+### ⚙️ Guidelines
 
-Doing so makes it better for everyone here on this platform and respects what everyone has made. **Please be you and make yourself unique from the rest!** ✨
+> **Note:** Please follow these simple guidelines if you plan to reference this work:
 
-<hr/>
-<a href="https://www.buymeacoffee.com/braydenw" target="_blank"><img src="./public/static/misc/buy-me-a-coffee.svg" alt="Buy Me A Coffee: @BraydenW" width="160"></a>&nbsp;
-<a href="https://paypal.me/braydentw" target="_blank"><img src="./public/static/misc/paypal.svg" alt="PayPal: @BraydenTW" width="160"></a>
-<br/>
-<p>Thank you so much for your support. 💙</p>
+1. You can **use it as inspiration** for your own portfolio.  
+2. **Avoid copying directly** — make it your own and add your style.  
+3. **Credit** [@SujethLasrado](https://github.com/SujethLasrado) if you take inspiration from it.
+
+Let’s keep the dev community creative and respectful ✨

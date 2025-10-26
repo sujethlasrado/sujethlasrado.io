@@ -117,14 +117,14 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "The code was clean, easy to understand, and exactly what I was looking for.",
-    name: "Philip Imperato",
-    job: "CEO of VisualBonus",
+      "Sujeth is a proactive and versatile team player who consistently delivers high-quality work and supports his team with commitment and enthusiasm.",
+    name: "Kanta Kashyap",
+    job: "Product/Project Manager | Agile Coach (DTICI)",
   },
   {
     quote:
-      "My vision was executed perfectly. The quality and speed of the work was excellent.",
-    name: "Zach Green",
-    job: "Founder of Hangxiety Shrink",
+      "Sujeth is a highly skilled Java backend developer who handles complex problems with ease. His technical expertise, strong communication, and teamwork make him a valuable asset to any project.",
+    name: "Anaam Rasool",
+    job: "Software Developer (Daimler Truck Innovation Center India)",
   },
 ];
