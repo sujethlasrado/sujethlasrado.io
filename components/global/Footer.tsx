@@ -77,7 +77,7 @@ function Footer() {
                 alt="NextJS"
               />
               <Image
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                 width={26}
                 height={26}
                 alt="TailwindCSS"
