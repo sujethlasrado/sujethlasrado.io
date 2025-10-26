@@ -31,16 +31,25 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <meta name="title" content={pageTitle} />
         <meta name="description" content={desc} />
 
-        {/* Open Graph / LinkedIn Preview (disabled image for now) */}
+        {/* Open Graph / LinkedIn Preview */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sujethlasrado-io.netlify.app/" />
+        <meta
+          property="og:url"
+          content="https://sujethlasrado-io.netlify.app/"
+        />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
-        {/* <meta property="og:image" content="/static/favicon/android-chrome-192x192.png" /> */}
+        <meta
+          property="og:image"
+          content="https://sujethlasrado-io.netlify.app/static/misc/og.png"
+        />
 
         {/* Twitter Preview (disabled image for now) */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://sujethlasrado-io.netlify.app/" />
+        <meta
+          property="twitter:url"
+          content="https://sujethlasrado-io.netlify.app/"
+        />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
         {/* <meta property="twitter:image" content="/static/favicon/android-chrome-192x192.png" /> */}
