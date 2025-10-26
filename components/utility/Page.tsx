@@ -20,24 +20,24 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <title>{pageTitle}</title>
 
         {/* Favicon for browser tab */}
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/static/favicon/apple-touch-icon.png"
-        />
-        <link
+        /> */}
+        {/* <link
           rel="icon"
           type="image/png"
           sizes="32x32"
           href="/static/favicon/favicon-32x32.png"
-        />
+        /> */}
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="/static/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/static/favicon/site.webmanifest" />
+        {/* <link rel="manifest" href="/static/favicon/site.webmanifest" /> */}
 
         {/* Meta */}
         <meta name="title" content={pageTitle} />
@@ -45,23 +45,29 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
 
         {/* Open Graph / LinkedIn Preview */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sujethlasrado-io.netlify.app/" />
+        <meta
+          property="og:url"
+          content="https://sujethlasrado-io.netlify.app/"
+        />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
-        <meta
+        {/* <meta
           property="og:image"
           content="https://sujethlasrado-io.netlify.app/static/favicon/android-chrome-192x192.png"
-        />
+        /> */}
 
-        {/* Twitter Preview */}
+        {/* Twitter Preview
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://sujethlasrado-io.netlify.app/" />
-        <meta property="twitter:title" content={pageTitle} />
+        <meta
+          property="twitter:url"
+          content="https://sujethlasrado-io.netlify.app/"
+        /> */}
+        {/* <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
         <meta
           property="twitter:image"
           content="https://sujethlasrado-io.netlify.app/static/favicon/android-chrome-192x192.png"
-        />
+        /> */}
 
         {/* Google Analytics */}
         <script
