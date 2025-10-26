@@ -2,7 +2,7 @@ import Footer from "../global/Footer";
 import Head from "next/head";
 import MobileNavbar from "../global/MobileNavbar";
 import Navbar from "../global/Navbar";
-import React, { ReactChildren } from "react";
+import React from "react";
 
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
@@ -10,7 +10,7 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
       ? "Sujeth Lasrado - Fullstack Developer, Web Developer, Creator."
       : `${currentPage} - Sujeth Lasrado`
   }`;
-  console.log(currentPage);
+
   return (
     <div
       className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible"
@@ -19,12 +19,13 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
       <Head>
         <title>{pageTitle}</title>
 
-        {/* <link
+        {/* Favicon for browser tab */}
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/static/favicon/apple-touch-icon.png"
-        /> */}
-        {/* <link
+        />
+        <link
           rel="icon"
           type="image/png"
           sizes="32x32"
@@ -35,28 +36,34 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
           type="image/png"
           sizes="16x16"
           href="/static/favicon/favicon-16x16.png"
-        /> */}
-        {/* <link rel="manifest" href="/static/favicon/site.webmanifest" /> */}
+        />
+        <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
+        {/* Meta */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={desc} />
 
+        {/* Open Graph / LinkedIn Preview */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sujethlasrado-io/" />
+        <meta property="og:url" content="https://sujethlasrado-io.netlify.app/" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
         <meta
           property="og:image"
-          content="https://sujethlasrado-io/static/misc/og.png"
+          content="https://sujethlasrado-io.netlify.app/static/favicon/android-chrome-192x192.png"
         />
 
+        {/* Twitter Preview */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://sujethlasrado-io/" />
+        <meta property="twitter:url" content="https://sujethlasrado-io.netlify.app/" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
         <meta
           property="twitter:image"
-          content="https://sujethlasrado-io/static/misc/og.png"
-        ></meta>
+          content="https://sujethlasrado-io.netlify.app/static/favicon/android-chrome-192x192.png"
+        />
+
+        {/* Google Analytics */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -69,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KC3CN7V');`,
           }}
-        ></script>
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -83,6 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </Head>
+
       <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC3CN7V"
@@ -99,6 +107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         </div>
         {children}
       </main>
+
       <Footer />
     </div>
   );
