@@ -7,39 +7,41 @@ function Footer() {
   return (
     <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-5 bg-bg">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
-        {footer.columns.map((item, index) => {
-          return (
-            <div key={index} className="text-left mb-5 sm:mb-0">
-              <h4 className="uppercase text-fun-gray text-sm font-bold">
-                {item.title}
-              </h4>
-              <div>
-                {item.links.map((item, index) => {
-                  return (
-                    <div key={index} className="my-4">
-                      {item.leavesWebsite ? (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          className="items-center flex"
-                        >
-                          {item.icon && (
-                            <span className="pr-2 -mb-1">
-                              <Image src={item.icon} width={20} height={20} />
-                            </span>
-                          )}
-                          {item.name}
-                        </a>
-                      ) : (
-                        <Link href={item.link}>{item.name}</Link>
+        {footer.columns.map((item, index) => (
+          <div key={index} className="text-left mb-5 sm:mb-0">
+            <h4 className="uppercase text-fun-gray text-sm font-bold">
+              {item.title}
+            </h4>
+            <div>
+              {item.links.map((linkItem, idx) => (
+                <div key={idx} className="my-4">
+                  {linkItem.leavesWebsite ? (
+                    <a
+                      href={linkItem.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="items-center flex"
+                    >
+                      {linkItem.icon && (
+                        <span className="pr-2 -mb-1">
+                          <Image
+                            src={linkItem.icon}
+                            width={20}
+                            height={20}
+                            alt=""
+                          />
+                        </span>
                       )}
-                    </div>
-                  );
-                })}
-              </div>
+                      {linkItem.name}
+                    </a>
+                  ) : (
+                    <Link href={linkItem.link}>{linkItem.name}</Link>
+                  )}
+                </div>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        ))}
         <div className="text-center col-span-2 sm:col-auto sm:text-left pt-8 sm:mt-0 sm:pt-0 text-fun-gray border-t border-fun-pink-dark sm:border-0">
           <h4 className="uppercase text-fun-gray text-sm font-bold">
             Quick Contact
@@ -56,39 +58,33 @@ function Footer() {
           </div>
         </div>
       </div>
+
       <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
-        <p className="flex flex-col items-center justify-center ">
+        <div className="flex flex-col items-center justify-center">
           <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
-            Made with{" "}
+            Made with
             <div className="space-x-2 inline-flex items-center -mt-1 ml-3">
-              <span>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  width="26"
-                  title="React"
-                />
-                <span className="sr-only">React</span>
-              </span>
-              <span>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                  width="40"
-                  className="invert"
-                  title="NextJS"
-                />
-                <span className="sr-only">NextJS</span>
-              </span>
-              <span>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                  width="26"
-                  title="TailwindCSS"
-                />
-                <span className="sr-only">TailwindCSS</span>
-              </span>
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                width={26}
+                height={26}
+                alt="React"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                width={40}
+                height={26}
+                alt="NextJS"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                width={26}
+                height={26}
+                alt="TailwindCSS"
+              />
             </div>
           </div>
-          <div className="mt-2 text-xs ">
+          <div className="mt-2 text-xs">
             Made by{" "}
             <a
               href="mailto:sujethlasrado8@gmail.com"
@@ -98,14 +94,15 @@ function Footer() {
             </a>
             . All rights reserved.
           </div>
-        </p>
+        </div>
       </div>
+
       <div className="mt-8 text-center sm:text-right sm:-mt-12">
         <a
           className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
-          href="https://github.com/braydentw/braydentw.io"
+          href="https://github.com/sujethlasrado"
           target="_blank"
-          rel="nooreferrer"
+          rel="noopener noreferrer"
         >
           <Image
             src="/static/icons/github.svg"
@@ -113,7 +110,7 @@ function Footer() {
             height={16}
             alt="Github Icon"
           />
-          <span className="ml-2">View Source Code </span>
+          <span className="ml-2">View Source Code</span>
         </a>
       </div>
     </footer>

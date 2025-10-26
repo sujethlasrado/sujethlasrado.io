@@ -1,9 +1,15 @@
-type Route = {
+// global.ts
+
+// ------------------------
+// Types
+// ------------------------
+export type Route = {
   title: string;
   path: string;
+  disabled?: boolean; // optional flag to hide/disable route
 };
 
-type FooterCol = {
+export type FooterCol = {
   title: string;
   links: {
     name: string;
@@ -13,29 +19,32 @@ type FooterCol = {
   }[];
 };
 
-type Footer = {
+export type Footer = {
   columns: FooterCol[];
 };
 
+// ------------------------
+// Routes
+// ------------------------
 export const routes: Route[] = [
   {
     title: "Home",
     path: "/",
   },
-  // {
-  //   title: "Blog",
-  //   path: "/blog",
-  // },
   {
     title: "Projects",
     path: "/projects",
   },
-  {
-    title: "Certifications",
-    path: "/certifications",
-  },
+  // {
+  //   title: "Certifications",
+  //   path: "/certifications",
+  //   disabled: true, // hide/disable this entry for now
+  // },
 ];
 
+// ------------------------
+// Footer
+// ------------------------
 export const footer: Footer = {
   columns: [
     {
@@ -46,11 +55,6 @@ export const footer: Footer = {
           link: "/",
           leavesWebsite: false,
         },
-        // {
-        //   name: "Blog",
-        //   link: "/blog",
-        //   leavesWebsite: false,
-        // },
         {
           name: "Projects",
           link: "/projects",
@@ -58,7 +62,7 @@ export const footer: Footer = {
         },
         {
           name: "Certifications",
-          link: "/certifications",
+          link: "/",
           leavesWebsite: false,
         },
       ],

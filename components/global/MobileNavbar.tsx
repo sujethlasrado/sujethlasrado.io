@@ -41,6 +41,8 @@ export default function MobileNavbar() {
     };
   }, []);
 
+  const visibleRoutes = routes.filter((r) => !r.disabled);
+
   return (
     <nav>
       <div
@@ -75,7 +77,7 @@ export default function MobileNavbar() {
             isMenuRendered ? "menuRendered" : ""
           }`}
         >
-          {routes.map((item, index) => (
+          {visibleRoutes.map((item, index) => (
             <li
               key={index}
               className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
